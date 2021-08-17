@@ -47,6 +47,7 @@ var mensajeValidado = false;
 
 $('#name').blur(function () {
   try {
+    console.log("Estoy activado")
     var nombreCompleto = document.querySelector("#name").value;
     nombreCompleto = nombreCompleto.replace(/\r?\n/g, " ");
     nombreCompleto = nombreCompleto.replace(/[ ]+/g, " ");
@@ -129,6 +130,7 @@ function sendEmail() {
       })
         .then(function (message) {
           alert("Correo enviado exitosamente")
+          location.reload();
         });
       console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
     } else {
