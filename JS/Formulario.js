@@ -40,6 +40,7 @@ function getEdad() {
 }
 
 /*Validación campos formulario */
+
 var nombreValidado = false;
 var correoValidado = false;
 var edadValidada = false;
@@ -163,7 +164,20 @@ function sendEmail() {
         });
       console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
     } else {
-      alert("Compruebe la integridad de los datos.")
+      var MensajeError = "Compruebe la integridad de los datos.";
+      if(nombreValidado==false){
+        MensajeError+="\n\nSe requiere la inserción mínima del primer nombre y los dos apellidos.\n\Se recomienda verificar los espacios vacios entre palabras.";
+      }
+      if(correoValidado==false){
+        MensajeError+="\n\nSe requiere una estructura de correo válida.\n\Se recomienda verificar espacios, signos especiales y datos del servicio.";
+      }
+      if(edadValidada==false){
+        MensajeError+="\n\nSe requiere el registro de la fecha de nacimiento exacta.\n";
+      }
+      if(mensajeValidado==false){
+        MensajeError+="\n\nSe requiere que el contenido sea diferente de vacio.\n";
+      }
+      alert(MensajeError)
       console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
     }
   } catch (error) {
