@@ -69,9 +69,22 @@ article:before{
 
 /*Table*/
 
-#TablaLetra{
-    width: 100%;
+.contenedorTablas{
+    display: flex;
+}
+
+#TablaLetraOriginal{
+    width: 50%;
     text-align: left;
+}
+
+#TablaLetraTraducida{
+    width: 50%;
+    text-align: left;
+}
+
+#TablaPie{
+    width: 100%;
 }
 
 tr{
@@ -133,6 +146,28 @@ td p{
 
     article{
         box-shadow: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenedorTablas{
+        display: grid;
+    }
+    #TablaLetraOriginal{
+        width: 100%;
+        text-align: left;
+    }
+    
+    #TablaLetraTraducida{
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+    }
+    .contenedorTablaPie{
+        width: 100%;
+    }
+    #audioCancion{
+        width: 95%;
     }
 }
 
