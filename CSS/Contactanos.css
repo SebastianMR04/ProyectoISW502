@@ -148,9 +148,51 @@ display:block;
   margin-right: 40px;
 }
 
+.ck_box_Container p{
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
 
 #range{
-width: 100%;
+width: 80%;
+}
+
+.campoRange{
+  position: relative;
+  display: flex; 
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.campoRange .valor{
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
+}
+
+.campoRange .valor.Izquierda{
+  margin-right: 20px;
+}
+
+.campoRange .valor.Derecha{
+  margin-left: 20px;
+}
+
+.valorDeslizar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#textInput{
+  border: 1px red solid;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
 }
 
 /*Articles*/
@@ -258,5 +300,9 @@ article img{
   table {
     display: block;
     overflow-x: auto;
+  }
+
+  #textInput{
+    width: 100%;
   }
 }
