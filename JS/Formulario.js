@@ -38,7 +38,6 @@ function getEdad() {
   }
   document.querySelector("#age").value = edad
 }
-// $('#BornDate').blur(getEdad);
 
 /*Validación campos formulario */
 var nombreValidado = false;
@@ -54,11 +53,11 @@ $('#name').blur(function () {
     nombreCompleto = nombreCompleto.replace(/^ /, "");
     nombreCompleto = nombreCompleto.replace(/ $/, "");
     var cantidadPalabras = nombreCompleto.split(" ");
-    console.log(cantidadPalabras);
     if (cantidadPalabras.length >= 3) {
       nombreValidado = true;
     } else {
       alert("Datos invalidos.\n\nSe requiere la inserción mínima del primer nombre y los dos apellidos.\n\Se recomienda verificar los espacios vacios entre palabras.")
+      nombreValidado = false;
     }
   } catch (error) {
     alert(error);
@@ -72,6 +71,7 @@ $('#mail').blur(function () {
       correoValidado = true;
     } else {
       alert("Datos invalidos en correo.\n\nSe requiere una estructura de correo válida.\n\Se recomienda verificar espacios, signos especiales y datos del servicio.")
+      correoValidado=false;
     }
   } catch (error) {
     alert(error);
@@ -85,6 +85,7 @@ $('#BornDate').blur(function () {
       edadValidada = true;
     } else {
       alert("Datos invalidos en fecha de nacimiento.\n\nSe requiere el registro de la fecha de nacimiento exacta.\n")
+      edadValidada=false;
     }
   } catch (error) {
     alert(error);
@@ -93,10 +94,11 @@ $('#BornDate').blur(function () {
 
 $('#message').blur(function () {
   try {
-    if (document.querySelector("#message").value.length!=0) {
+    if (document.querySelector("#message").value.length != 0) {
       mensajeValidado = true;
     } else {
       alert("Datos invalidos en mensaje.\n\nSe requiere que el contenido sea diferente de vacio.\n")
+      mensajeValidado=false;
     }
   } catch (error) {
     alert(error);
@@ -128,12 +130,11 @@ function sendEmail() {
         .then(function (message) {
           alert("Correo enviado exitosamente")
         });
-        console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
+      console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
     } else {
       alert("Compruebe la integridad de los datos.")
       console.log(nombreValidado, edadValidada, correoValidado, mensajeValidado);
     }
-
   } catch (error) {
     alert(error);
   }
