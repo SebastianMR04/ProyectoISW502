@@ -150,6 +150,9 @@ td p{
 }
 
 @media screen and (max-width: 800px){
+    article{
+        width: 90%;
+    }
     .contenedorTablas{
         display: grid;
     }
