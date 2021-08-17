@@ -25,7 +25,7 @@
         <div class="header-content">
 
             <div class="logo">
-                <h1>Biblioteca <b>Rock y Metal</b></h1>
+                <a href="index.html"><img src="img/Adicionales/logo.png" alt="" class="logo"></a>
             </div>
             <div class="menu" id="show-menu">
                 <nav>
@@ -75,35 +75,50 @@
             </div>
 
             <article>
+                <div class="contenedorTablas">
+                    <table id="TablaLetraOriginal">
+                        <thead>
+                            <th id="TituloCancionOriginal" class="CeldaGrande"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p id="LetraOriginal"></p>
+                                </td>
+                                <td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </table>
 
-                <table id="TablaLetra">
-                    <thead>
-                        <th id="TituloCancionOriginal" class="CeldaGrande"></th>
-                        <th id="TituloCancioNTraducida" class="CeldaGrande"></th>
-                    </thead>
-                    <tbody>
+                    <table id="TablaLetraTraducida">
+                        <thead>
+                            <th id="TituloCancioNTraducida" class="CeldaGrande"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p id="LetraTraducida"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="contenedorTablaPie">
+                    <table id="TablaPie">
                         <tr>
-                            <td>
-                                <p id="LetraOriginal"></p>
-                            </td>
-                            <td>
-                                <p id="LetraTraducida"></p>
+                            <td style="text-align: center; padding-top: 20px;">
+                                <audio id="audioCancion" src="" preload="auto" controls></audio>
                             </td>
                         </tr>
-                    </tbody>
-                    <tfoot>
                         <tr>
-                            <td colspan="2" style="text-align: center; padding-top: 20px;">
-                                <audio  id="audioCancion" src="" preload="auto" controls></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" >
+                            <td >
                                 <p class="CeldaGrande">Todos los derechos reservados para sus respectivos dueños</p>
                             </td>
                         </tr>
-                    </tfoot>
-                </table>
+                    </table>
+                </div>
+
             </article>
 
             <div class="container-video">
